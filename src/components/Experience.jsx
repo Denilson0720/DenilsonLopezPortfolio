@@ -74,7 +74,7 @@ export default function Experience(){
             data-aos-easing = 'ease-in-sine'
             // data-aos-offset='400'
         >
-            <h3>Experience</h3>
+            <h3>Where Ive worked</h3>
             
             <img className='njcu-logo' src={njcu} alt="njcu logo"/>
             <p>Check out the poster presentation for my project.</p>

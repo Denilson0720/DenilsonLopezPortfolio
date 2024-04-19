@@ -1,5 +1,6 @@
 import React from 'react'
 // import { NavLink,Link } from 'react-router-dom';
+
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 export default function Header(){
     const [navFixed,setNavFixed] = React.useState()

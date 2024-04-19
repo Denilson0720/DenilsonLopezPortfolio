@@ -1,4 +1,5 @@
 import React,{useEffect} from 'react'
+import DrawerAppBar from './components/DrawerAppBar';
 import Header from './components/Header'
 import Footer from './components/Footer';
 import Home from './components/Home';
@@ -12,7 +13,8 @@ function App() {
   return (
     <> 
       <BrowserRouter>
-      <Header/>
+      {/* <Header/> */}
+      <DrawerAppBar/>
       <Home/>
       <About/>
       <Experience/>

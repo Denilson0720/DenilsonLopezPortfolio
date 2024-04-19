@@ -8,7 +8,7 @@ export default function Home(){
         <> 
             <div id ="home"className = 'home-ctn'>
 
-                <h1>Hi, Im Denilson, a {TextShifter({words})}</h1>
+                <h2>Hi, Im Denilson, a <br/> {TextShifter({words})}</h2>
                 {/* <h1>{TextShifter({words})}</h1> */}
                 <h2 className = 'responsiveness-note'>Hey you must be on a mobile device, Sorry about the layout, Im still working on full responsiveness accross all screen sizes. Thank you for your patience - Denilson</h2>
   
