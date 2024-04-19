@@ -21,7 +21,10 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 const drawerWidth = 240;
 
 function DrawerAppBar(props) {
-  const trigger = useScrollTrigger();
+  const trigger = useScrollTrigger({
+    // threshold:'100'
+    disableHysteresis:'true'
+  });
 
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);

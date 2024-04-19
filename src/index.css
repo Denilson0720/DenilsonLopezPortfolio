@@ -13,9 +13,10 @@ h1{
   width:90%;
 }
 h3{
-  font-weight: 450;
-  /* color:pink; */
-  /* font-size: 1.2rem; */
+  font-weight: 550;
+}
+p{
+  font-weight: 500;
 }
 
 .home-ctn>.responsiveness-note{
@@ -40,6 +41,7 @@ h3{
   position:fixed;
   top:0;
   transition:0.5s ease-in-out;
+  border:none
 }
 .navbar-ctn.scrolled{
   background-color: #0a3032eb;
@@ -190,6 +192,7 @@ h3{
   align-items: center;
   width:100%;
   height:100%;
+  padding-top:2rem;
 }
 .abt-text>.quote{
   margin-bottom:5rem;
@@ -205,13 +208,26 @@ h3{
 @media screen and (max-width:1000px) {
   .abt-ctn{
     height:auto;
-    border:2px solid white;
+    /* border:2px solid white; */
+  }
+  .abt-text{
+  }
+  .abt-text>.intro{
+    /* padding-top:2rem; */
+    line-height: 2rem;
+    width:80%;
   }
 }
 
 /* EXPERIENCE SECTION */
+.experience-title{
+  text-align: center;
+  /* margin:0; */
+  margin:3rem 0 0 0;
+}
 .experience-ctn{
   display: flex;
+  /* flex-direction: column; */
   height:100vh;
   padding-top:4rem;
   width:100%;
@@ -222,7 +238,6 @@ h3{
   align-items: center;
   flex-direction: column;
   padding-top:4rem;
-
 }
 .work-exp-ctn{
   /* width:auto; */
@@ -282,35 +297,37 @@ h3{
     flex-direction: column;
     align-items: center;
     height:auto;
-    border:2px solid teal;
     /* margin-top:0; */
     padding-top:1rem;
   }
   .skills-ctn{
-    border:2px solid teal;
     width:100%;
   }
   .tech-icons-ctn{
-    /* grid-row-gap:1rem; */
-    border:2px solid teal;
-    width:100%;
+    width:90%;
   }
   .icon{
-    /* border:2px solid teal; */
     width:3rem;
-
   }
   .work-exp-ctn{
-    border:2px solid teal;
     width:100%;
+    /* border:2px solid teal; */
+    padding-top:0rem;
   }
   .work-exp-ctn>h3, .skills-ctn>h3{
-    border:2px solid teal;
     margin:0
+  }
+  .work-exp-ctn>p{
+    margin-top:0;
+    width:80%;
+    text-align: center;
   }
   .njcu-logo{
     margin-top:1rem;
     height:4rem;
+  }
+  .deepracer-img{
+    width:80%;
   }
 }
 /* WORK SECTION */
@@ -387,7 +404,6 @@ margin-bottom: 0;
 /* WORK MOBILE */
 @media screen and (max-width:1000px) {
   .work-ctn{
-    border:2px solid teal;
     height:auto;
     padding-top:4rem;
     /* flex-direction: column; */
@@ -485,13 +501,9 @@ margin-bottom: 0;
 /* MOBILE CONTACT */
 /* .contact-ctn */
 @media  screen and (max-width:1000px) {
-  .contact-ctn{
-    border: 2px solid teal;
-  }
   .contact-ctn>h3,h4{
     text-align: center;
     width:80%;
-    border:2px solid teal;
   }
   .contact-form{
     width:70%;
