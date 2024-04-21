@@ -54,14 +54,14 @@ export default function Experience(){
         <div 
             className = 'skills-ctn'
             // id='exper'
-            data-aos="fade-right"
+            data-aos="fade-up"
             data-aos-duration='1000'
             data-aos-easing = 'ease-in-sine'
             // data-aos-offset='400'
 
         >
-            <h3>Tech ive worked with before
-            </h3>
+            <h4>Tech ive worked with before
+            </h4>
             <div className = 'tech-icons-ctn'>
                 <img className = 'icon' src={html} alt="html icon"/>
                 <img className = 'icon' src={css} alt="css icon"/>
@@ -79,12 +79,12 @@ export default function Experience(){
             </div>
         </div>
         <div className = 'work-exp-ctn'
-            data-aos='fade-left'
+            data-aos='fade-up'
             data-aos-duration='1000'
             data-aos-easing = 'ease-in-sine'
             // data-aos-offset='400'
         >
-            <h3>Where Ive worked</h3>
+            <h4>Where Ive worked</h4>
             
             <img className='njcu-logo' src={njcu} alt="njcu logo"/>
             <p>Check out the poster presentation for my research project.</p>

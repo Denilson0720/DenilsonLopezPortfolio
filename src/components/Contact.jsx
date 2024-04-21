@@ -10,7 +10,7 @@ export default function Contact(){
         <div 
             className = 'contact-ctn'
             id='contact'
-            data-aos="fade-up"
+            data-aos="fade-down"
             data-aos-duration='1000'
             data-aos-easing = 'ease-in-sine'
         >

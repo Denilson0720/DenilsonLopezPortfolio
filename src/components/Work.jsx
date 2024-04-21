@@ -67,7 +67,7 @@ export default function Work(){
             <div className='projects-ctn'>
                 <div 
                     className = 'work-left'
-                    data-aos="fade-right"
+                    data-aos="fade-up"
                     data-aos-duration='1000'
                     data-aos-easing = 'ease-in-sine'
                     // data-aos-offset = '250'
@@ -76,7 +76,7 @@ export default function Work(){
                 </div>
                 <div 
                     className = 'work-right'
-                    data-aos="fade-left"
+                    data-aos="fade-up"
                     data-aos-duration='1000'
                     data-aos-easing = 'ease-in-sine'
                     // data-aos-offset = '300'

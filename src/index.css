@@ -5,18 +5,34 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Lato';
 }
+
 h1{
   font-weight: 600;
   text-align: center;
   width:90%;
+  /* font-family: 'Josefin Sans'; */
 }
 h3{
-  font-weight: 550;
+  font-weight: 600;
+  font-size: 1.4rem;
+  /* font-family: 'Josefin Sans'; */
+}
+h4{
+  font-weight: 520;
+  font-size: 1.2rem;
 }
 p{
   font-weight: 500;
+  font-size: 1.2rem;
+  /* font-family: 'Josefin Sans'; */
+}
+@media screen and (max-width:1000px) {
+  h3,p,h4{
+    font-size: 1rem;
+  }
+  
 }
 
 .home-ctn>.responsiveness-note{
@@ -35,17 +51,16 @@ p{
 /* Header Navbar section*/
 .navbar-ctn{
   display:flex;
-  width:100%;
   padding:0 2rem;
   color:#ffffff;
   position:fixed;
   top:0;
   transition:0.5s ease-in-out;
-  border:none
+  /* overflow-x:hidden; */
+  width:100%;
 }
 .navbar-ctn.scrolled{
   background-color: #0a3032eb;
-   /* color:white; */
    z-index: 1;
 }
 .navbar-ctn>.short-logo, .navbar-ctn>.long-logo{
@@ -76,6 +91,7 @@ p{
 .navbar-ctn>a:hover{
   text-decoration: underline;
   font-weight: 700;
+  filter:brightness(0) saturate(100%) invert(47%) sepia(42%) saturate(648%) hue-rotate(134deg) brightness(98%) contrast(99%);
 }
 @media screen and (max-width:600px) {
   .navbar-ctn>a{
@@ -158,7 +174,7 @@ p{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  min-height: 110vh;
+  min-height: 100vh;
   color: white;
   display:flex;
   flex-direction: column;
@@ -169,30 +185,51 @@ p{
   /* font-weight: 600; */
   text-align: center;
 }
+h3.dls-watermark{
+  font-family: 'Josefin Sans';
+  font-size: 1.1rem;
+  display:flex;
+  /* border:2px solid white; */
+  color:#c9c0c0bd;
+  position:absolute;
+  bottom:0%;
+  right: 1%;
+  padding:1rem;
+  align-items: center;
+  /* justify-content: center; */
+  /* align-content: center; */
+  /* text-align: center; */
+}
 @media screen and (max-width:1000px) {
   .home-ctn>h2{
     width:60%;
+  }
+  h3.dls-watermark{
+    font-size:0.8rem;
+    /* border:2px solid white; */
+    margin-bottom:0;
   }
   
 }
 /* ABOUT ME SECTION */
 .abt-ctn{
-  height:100vh;
+  height:70vh;
+  width:100vw;
   display:flex;
   justify-content: center;
-  /* align-items: center; */
   padding-bottom:0;
-  /* padding-top:0; */
+  /* border:2px solid green; */
 }
 .abt-text{
   display:flex;
   flex-direction: column;
-  justify-content: center;
   text-align: center;
   align-items: center;
   width:100%;
   height:100%;
-  padding-top:2rem;
+  padding-top:8rem;
+  /* border:2px solid blue; */
+  /* padding-bottom:0; */
 }
 .abt-text>.quote{
   margin-bottom:5rem;
@@ -210,8 +247,7 @@ p{
     height:auto;
     /* border:2px solid white; */
   }
-  .abt-text{
-  }
+
   .abt-text>.intro{
     /* padding-top:2rem; */
     line-height: 2rem;
@@ -222,15 +258,9 @@ p{
 /* EXPERIENCE SECTION */
 .experience-title{
   text-align: center;
-  /* margin:0; */
-  margin:3rem 0 0 0;
 }
 .experience-ctn{
   display: flex;
-  /* flex-direction: column; */
-  height:100vh;
-  padding-top:4rem;
-  width:100%;
 }
 .skills-ctn{
   width:55%;
@@ -276,6 +306,9 @@ p{
 }
 .work-exp-ctn>h3{
   margin-bottom:3rem;
+}
+.work-exp-ctn>p{
+  font-size: 1rem;
 }
 .njcu-logo{
   height:6rem;
@@ -332,6 +365,7 @@ p{
 }
 /* WORK SECTION */
 .work-ctn{
+  width:100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -423,6 +457,7 @@ margin-bottom: 0;
 /* contact section */
 .contact-ctn{
   display: flex;
+  /* width:100%; */
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -469,7 +504,7 @@ margin-bottom: 0;
 }
 .contact-form>label{
   padding:1rem 1rem;
-  font-weight: 500;
+  font-weight: 600;
   display: flex;
   align-items: center;
 }
@@ -483,12 +518,14 @@ margin-bottom: 0;
 
 .submit-icon{
   height:2.2rem;
+  /* transition:1ms; */
   -moz-transform: scaleX(-1);
         -o-transform: scaleX(-1);
         -webkit-transform: scaleX(-1);
         transform: scaleX(-1);
         filter: FlipH;
         -ms-filter: "FlipH";
+  
 }
 .submit-icon.true{
   translate:800px;
@@ -496,7 +533,11 @@ margin-bottom: 0;
 }
 .submit-icon.false{
   translate:0;
-  transition:4s;
+  transition:3s;
+}
+.submit-icon:hover{
+  filter:brightness(0) saturate(100%) invert(47%) sepia(42%) saturate(648%) hue-rotate(134deg) brightness(98%) contrast(99%);
+  cursor: pointer;
 }
 /* MOBILE CONTACT */
 /* .contact-ctn */
@@ -517,11 +558,15 @@ margin-bottom: 0;
   display:flex;
   flex-direction: column;
   /* height: 8rem; */
+  /* width:100vw; */
   padding:3rem 0;
   background-color:#0a3032;
   justify-content: center;
   align-items: center;
   color:white;
+}
+.footer-ctn>p{
+  font-size: 1rem;
 }
 .footer-icon-ctn{
   display:flex;
@@ -532,12 +577,14 @@ margin-bottom: 0;
 }
 .footer-icon-ctn>a>img{
   width:1.5rem;
-
   -webkit-filter: invert(1);
    filter: invert(1);
-
-
+}
+.footer-icon-ctn>a>img:hover{
+  /* filter:; */
+  filter:brightness(0) saturate(100%) invert(47%) sepia(42%) saturate(648%) hue-rotate(134deg) brightness(98%) contrast(99%);
 
 }
+
 /* new navbar styles */
 

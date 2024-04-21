@@ -16,7 +16,7 @@ export default function About(){
             data-aos-duration='1000'
             data-aos-easing = 'ease-in-sine'
             // id="about"
-            // data-aos-offset = '400'
+            data-aos-offset = '300'
         >
             
             {/* <img src={denilson} alt="profile icon image" /> */}

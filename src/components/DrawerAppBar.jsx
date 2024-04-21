@@ -1,20 +1,10 @@
 import * as React from 'react';
-import { useEffect } from 'react';
-import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-import CssBaseline from '@mui/material/CssBaseline';
-import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 
@@ -50,13 +40,9 @@ function DrawerAppBar(props) {
 
   return (
     
-    <Box sx={{ display: 'flex' }}>
-      <CssBaseline />
-      {/* navbar contiainer */}
+    <Box sx={{display:'flex'}}>
       <AppBar component="nav" color='transparent'>
         <Toolbar className={trigger?'navbar-ctn scrolled':'navbar-ctn'}>
-          {/* <h2 className ='short-logo'>DL</h2> */}
-          {/* <h2 className='long-logo'>Denilson Lopez</h2> */}
             <AnchorLink href = '#home' className = 'short-logo'>DL</AnchorLink>
             <AnchorLink href = '#home' className = 'long-logo'>Denilson Lopez</AnchorLink>
             {/* display=none when mobile */}
