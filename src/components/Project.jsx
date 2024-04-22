@@ -11,9 +11,8 @@ export default function Project({title,description,tools,imageUrl,url}){
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        width: 400,
+        // width: 700,
         bgcolor: 'background.paper',
-        border: '2px solid #000',
         boxShadow: 24,
         p: 2
         // padding
@@ -42,9 +41,9 @@ export default function Project({title,description,tools,imageUrl,url}){
             }}
         >
             <Fade in={open}>
-                <Box sx={style} className = 'modal'>
+                <Box sx={style} className = 'project-modal'>
                 <h4>{title}</h4>
-                <img className = 'modal-img' src={imageUrl} alt="" />
+                <img className = 'project-modal-img' src={imageUrl} alt="" />
                 <p>{description}</p>
                 <a href={url}>Visit {title}</a>
                 </Box>

@@ -3,7 +3,7 @@ import TextShifter from '../utils/TextShifter'
 // import CameraIcon from '@mui/icons-material/Camera';
 import CameraAltIcon from '@mui/icons-material/CameraAlt';
 export default function Home(){
-    const words = ['...Software Developer.        ','...Photographer.        ','...Runner.        ','...Car Enthusiast.         ']
+    const words = ['...Software Developer.        ','...Programmer.          ','...Photographer.        ','...Runner :)        ']
     //add watermark to background image
  
     return(
