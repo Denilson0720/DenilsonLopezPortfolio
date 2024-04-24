@@ -23,16 +23,6 @@ export default function Work(){
         }
         loadProjects()
     },[])
-    const projectElements =projects.map(project=>(
-        <Project
-            title = {project.title}
-            description = {project.description}
-            tools = {project.tools}
-            imageUrl = {project.imageUrl}
-            url = {project.url}
-            key = {project.title}
-        />
-    ))
     const projectElementsLeft =projectsFirstHalf.map(project=>(
         <Project
             title = {project.title}

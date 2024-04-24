@@ -21,6 +21,5 @@ export async function getProjects(){
         ...doc.data(),
         id:doc.id
     }))
-    console.log(projects)
     return projects;
 }
