@@ -13,7 +13,6 @@ function App() {
   return (
     <> 
       <BrowserRouter>
-      {/* <Header/> */}
       <DrawerAppBar/>
       <Home/>
       <About/>

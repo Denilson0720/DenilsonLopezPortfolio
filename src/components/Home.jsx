@@ -11,7 +11,6 @@ export default function Home(){
             <div id ="home"className = 'home-ctn'>
 
                 <h2>Hi, Im Denilson, a <br/> {TextShifter({words})}</h2>
-                {/* <h1>{TextShifter({words})}</h1> */}
                 <h2 className = 'responsiveness-note'>Hey you must be on a mobile device, Sorry about the layout, Im still working on full responsiveness accross all screen sizes. Thank you for your patience - Denilson</h2>
                 <h3 className = 'dls-watermark'><CameraAltIcon fontSize='medium'/>DLS Gallery 2024</h3>
             </div>
