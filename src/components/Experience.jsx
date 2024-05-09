@@ -1,4 +1,5 @@
 import React,{useEffect} from 'react'
+import { Tooltip,Button } from '@mui/material'
 import ReactDOM from 'react-dom/client'
 import node from '../assets/icons/node-icon.png'
 import java from '../assets/icons/java-icon.png'
@@ -20,6 +21,9 @@ import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import Backdrop from '@mui/material/Backdrop';
 import deepracer from '../assets/icons/deepracer.png'
+import figma from '../assets/icons/figma.png'
+import restful from '../assets/icons/restful.svg'
+import ejs from '../assets/icons/ejs.svg'
 import 'aos/dist/aos.css';
 
 export default function Experience(){
@@ -37,19 +41,12 @@ export default function Experience(){
       const [open, setOpen] = React.useState(false);
       const handleOpen = () => setOpen(true);
       const handleClose = () => setOpen(false);
+      const [openWakefern, setOpenWakefern] = React.useState(false);
+      const handleOpenWakefern = ()=> setOpenWakefern(true);
+      const handleCloseWakefern = ()=>setOpenWakefern(false);
     return(
         <>
-        {/* <h3 
-            data-aos='fade'
-            data-aos-duration='1000'
-            data-aos-easing='ease-in-sine'
-            className = 'experience-title'
-            id='experience'
-        >
-            Experience
-        </h3> */}
         <div className = 'experience-ctn' id='experience'>
-        {/* <h3>Experience</h3> */}
             <h3 className = 'experience-title'
                 data-aos='fade'
                 data-aos-duration='1000'
@@ -64,22 +61,55 @@ export default function Experience(){
                 data-aos-duration='1000'
                 data-aos-easing = 'ease-in-sine'
             >
-                <h4>Tech ive worked with before
+                <h4>Tech I've Worked With Before
                 </h4>
                 <div className = 'tech-icons-ctn'>
-                    <img className = 'icon' src={html} alt="html icon"/>
-                    <img className = 'icon' src={css} alt="css icon"/>
-                    <img className = 'icon' src={js} alt="javascript icon"/>
-                    <img className = 'icon' src={bootstrap} alt="bootstrap icon" />
-                    <img className = 'icon' src={java} alt="java icon"/>
-                    <img className = 'icon' src={python} alt="python icon"/>
-                    <img className = 'icon' src={reactIcon} alt="react icon"/>
-                    <img className ='icon' src={node} alt="node icon"/>
-                    <img className = 'icon' src={express} alt="express icon"/>
-                    <img className = 'icon' src={mysql} alt="mysql icon" />
-                    <img className = 'icon' src={mongoDB} alt="mongoDB icon"/>
-                    
-                    <img className = 'icon' src={github} alt="github icon" />
+                    <Tooltip title='HTML' arrow>
+                        <img className = 'icon' src={html} alt="html icon"/>
+                    </Tooltip>
+                    <Tooltip title='CSS' arrow>
+                        <img className = 'icon' src={css} alt="css icon"/>
+                    </Tooltip>
+                    <Tooltip title='JavaScript' arrow>
+                        <img className = 'icon' src={js} alt="javascript icon"/>
+                    </Tooltip>
+                    <Tooltip title="Bootstrap" arrow>
+                        <img className='icon' src={bootstrap} alt="bootstrap icon" />
+                    </Tooltip>
+                    <Tooltip title="Java" arrow>
+                        <img className='icon' src={java} alt="java icon" />
+                    </Tooltip>
+                    <Tooltip title="Python" arrow>
+                        <img className='icon' src={python} alt="python icon" />
+                    </Tooltip>
+                    <Tooltip title="React JS" arrow>
+                        <img className='icon' src={reactIcon} alt="react icon" />
+                    </Tooltip>
+                    <Tooltip title="Node JS" arrow>
+                        <img className='icon' src={node} alt="node icon" />
+                    </Tooltip>
+                    <Tooltip title="Express JS" arrow>
+                        <img className='icon' src={express} alt="express icon" />
+                    </Tooltip>
+                    <Tooltip title="MySQL" arrow>
+                        <img className='icon' src={mysql} alt="mysql icon" />
+                    </Tooltip>
+                    <Tooltip title="MongoDB" arrow>
+                        <img className='icon' src={mongoDB} alt="mongoDB icon" />
+                    </Tooltip>
+                    <Tooltip title="GitHub" arrow>
+                        <img className='icon' src={github} alt="github icon" />
+                    </Tooltip>
+                    <Tooltip title="Figma" arrow>
+                        <img className='icon' src={figma} alt="figma icon" />
+                    </Tooltip>
+                    <Tooltip title="EJS" arrow>
+                        <img className='icon' src={ejs} alt="ejs icon" />
+                    </Tooltip>
+                    <Tooltip title="Restful API" arrow>
+                        <img className='icon' src={restful} alt="restful api icon" />
+                    </Tooltip>
+
                 </div>
             </div>
             <div className = 'work-exp-ctn'
@@ -88,11 +118,16 @@ export default function Experience(){
                 data-aos-easing = 'ease-in-sine'
                 // data-aos-offset='400'
             >
-                <h4>Where Ive worked</h4>
+                <h4>Where I've Worked</h4>
                 
                 <img className='njcu-logo' src={njcu} alt="njcu logo"/>
-                <p>Check out the poster presentation for my research project.</p>
-                <img className ='deepracer-img' src={deepracer} alt="" onClick={handleOpen}/>
+                <p><b>Role:</b> Research Intern</p>
+                <nav onClick={handleOpen}>View Research Poster</nav>
+                {/* <img className ='deepracer-img' src={deepracer} alt="" onClick={handleOpen}/> */}
+
+                <img className = 'wakefern-logo' src={wakefern} alt="wakefern logo" />
+                <p><b>Role:</b> Logistics Intern</p>
+                <nav onClick = {handleOpenWakefern}>View Details</nav>
             </div>
             </div>
            
@@ -115,6 +150,31 @@ export default function Experience(){
                         {/* <p>something about njcu</p> */}
                         <img className = 'njcu-modal-img' src={deepracer} alt="" />
                         <a href={deepracerLink}>Google Slide</a>
+                    </Box>
+                </Fade>
+
+        </Modal>
+        <Modal
+                open={openWakefern}
+                onClose={handleCloseWakefern}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+                closeAfterTransition
+                slots={{ backdrop: Backdrop }}
+                slotProps={{
+                    backdrop: {
+                    timeout: 500,
+                },
+                }}
+            >
+                <Fade in={openWakefern}>
+                    <Box sx={style} className = 'wakefern-modal'>
+                        <img src={wakefern} alt="" />
+                        <h4>As an intern at Wakefern I:</h4>
+                        <p> - Proactively identified and applied the key responsibilities and operational requisites for overseeing a large
+                        corporation by closely shadowing and working alongside an experienced supervisor.</p>
+                        <p> - Sharpened teamwork and communication proficiencies to effectively relay crucial information in a high-pressure
+                        environment, aiding to an improvement in on-time shipments from 85% to 90% during peak hours.</p>
                     </Box>
                 </Fade>
 

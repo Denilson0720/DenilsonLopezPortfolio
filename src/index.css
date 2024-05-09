@@ -85,9 +85,10 @@ p{
   display:none
 }
 .navbar-ctn>.short-logo:hover, .navbar-ctn>.long-logo:hover{
-  filter:none;
+  /* filter:none; */
   text-decoration: none;
-  font-weight: 701;
+  filter:brightness(0) saturate(100%) invert(47%) sepia(42%) saturate(648%) hue-rotate(134deg) brightness(98%) contrast(99%);
+  /* font-weight: 701; */
 }
 .navbar-ctn>a{
   color:white;
@@ -100,7 +101,6 @@ p{
 }
 .navbar-ctn>a:hover{
   text-decoration: underline;
-  font-weight: 700;
 }
 @media screen and (max-width:600px) {
   .navbar-ctn>a{
@@ -297,8 +297,8 @@ h3.dls-watermark{
 }
 .tech-icons-ctn{
   display:grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-row-gap:2rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-row-gap:4rem;
   width:70%;
   /* gap:1rem; */
   justify-items: center;
@@ -316,15 +316,36 @@ h3.dls-watermark{
   transition:0.3s ease-in-out;
   /* box-shadow: -10px 10px 24px -3px rgba(0,0,0,0.2); */
 }
-.work-exp-ctn>h3{
-  margin-bottom:3rem;
+.work-exp-ctn{
+  /* border:2px solid black; */
+}
+.work-exp-ctn>h4{
+  margin-bottom:4rem;
 }
 .work-exp-ctn>p{
-  font-size: 1rem;
+  font-size: 1.2rem;
+  margin:0.4rem;
+  /* font-weight: 600; */
+}
+.work-exp-ctn>nav{
+  padding:1rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.work-exp-ctn>nav:hover{
+  /* font-weight: 800; */
+  text-decoration: underline;
+  transition:0.5s ease-in-out;
+  cursor: pointer;
 }
 .njcu-logo{
   height:6rem;
-  margin-bottom:2rem;
+  margin-bottom:1rem;
+}
+.wakefern-logo{
+  margin-bottom:1rem;
+  margin-top:4rem;
+  height: 6rem;
 }
 .deepracer-img{
   width:70%;
@@ -334,6 +355,12 @@ h3.dls-watermark{
 .deepracer-img:hover{
   box-shadow: -10px 10px 24px -3px rgba(0,0,0,0.2);
   filter:none;
+}
+.wakefern-modal{
+  text-align: center;
+}
+.wakefern-modal>p{
+  text-align: start;
 }
 .njcu-modal{
   width:50%;
@@ -367,18 +394,24 @@ h3.dls-watermark{
     flex-direction: column;
     align-items: center;
     height:auto;
-    /* margin-top:0; */
-    /* padding-top:1rem; */
     padding:4rem 0 4rem 0;
   }
   .experience-ctn>div{
     flex-direction: column;
   }
+  .experience-title{
+    margin-bottom:0;
+  }
   .skills-ctn{
     width:100%;
   }
+  .skills-ctn>h4{
+    margin:0;
+  }
   .tech-icons-ctn{
     width:90%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap:2rem;
   }
   .icon{
     width:3rem;
@@ -394,9 +427,18 @@ h3.dls-watermark{
     margin-top:0;
     width:80%;
     text-align: center;
+    font-size: 1rem;
+  }
+  .work-exp-ctn>nav{
+    font-size: 0.9rem;
+
   }
   .njcu-logo{
     margin-top:1rem;
+    height:4rem;
+  }
+  .wakefern-logo{
+    margin-top:2rem;
     height:4rem;
   }
   .deepracer-img{
@@ -425,21 +467,22 @@ margin-bottom: 0;
 .projects-ctn{
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   align-content: center;
 }
 .projects-ctn>div{
   display:flex;
   flex-direction: column;
   align-items: center;
+  margin-top:2rem;
 }
 
 .projects-ctn>.work-right{
-  margin-top:10rem;
-  padding-right:4rem;
+  /* margin-top:2rem; */
+  /* padding-right:2rem; */
 } 
 .projects-ctn>.work-left{
-  padding-left:4rem;
+  /* padding-left:4rem; */
 
 }
 /* Project component  */
@@ -449,28 +492,32 @@ margin-bottom: 0;
   max-width: 65%;
   justify-content: center;
   align-items: center;
-  border-radius: 5px;
+  border-radius: 2px;
   object-fit: contain;
   overflow: hidden;
   filter: grayscale(100%);
-  transition: 0.5s ease-in-out;
+  transition: 0.2s ease-in-out;
   margin:2rem 0;
+  /* text-decoration: underline black; */
   /* background-color: #0a3032; */
+  /* text-decoration:underline; */
 
 
 }
 .project-component-ctn:hover{
   filter:none;
   cursor: pointer;
-  color:white;
-  background-color:#135c60;
+  text-decoration: underline;
 }
 
 .project-component-ctn>img{
   width:100%;
+  /* border:1px solid #145d61; */
+
 }
 .project-component-ctn>h4{
   margin:1rem 0;
+  
 }
 /* inside modal project component */
 .project-modal{
@@ -479,14 +526,14 @@ margin-bottom: 0;
   /* justify-content: center; */
   width:50%;
   align-items: center;
-  border-radius: 0.7rem;
+  /* border-radius: 0.7rem; */
 }
 .project-modal-img{
   width:100%;
   height:100%;
 
   /* object-fit: contain; */
-  border-radius: 0.7rem;
+  /* border-radius: 0.7rem; */
 }
 .project-modal>h4{
   margin:0 0 1rem 0;
