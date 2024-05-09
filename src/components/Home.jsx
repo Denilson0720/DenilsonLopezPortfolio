@@ -19,7 +19,7 @@ export default function Home(){
                         " Photographer...",
                     ]}
                     typeSpeed={40}
-                    backSpeed={70}
+                    backSpeed={50}
                     loop
                     >
                 </ReactTyped>
