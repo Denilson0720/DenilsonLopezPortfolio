@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import Mustang from '../assets/icons/mustang.png'
+import { Tooltip} from '@mui/material'
 import 'animate.css';
 
 export const ContactUs = () => {
@@ -81,15 +82,20 @@ export const ContactUs = () => {
         <textarea 
           name="message" 
           rows='10' 
-          placeholder='words...another word...more words...lorem ipsum...'
+          placeholder='Your message goes here :)'
           onChange={handleChange}
           value={formState.message}
           required
           maxLength={250}
         />
+   
         <button className ='submit-ctn' type='submit' value = 'Send'>
+        <Tooltip title = 'send' arrow>
           <img type='submit' value="Send" src={Mustang} alt="paper airplane submit icon" className ={submittingState?'submit-icon true':'submit-icon false'}/>
+        </Tooltip>
         </button>
+
+    
     </form>
   );
 };

@@ -1,6 +1,5 @@
 import React,{useEffect} from 'react'
 import { Tooltip,Button } from '@mui/material'
-import ReactDOM from 'react-dom/client'
 import node from '../assets/icons/node-icon.png'
 import java from '../assets/icons/java-icon.png'
 import html from '../assets/icons/html-icon.png'
